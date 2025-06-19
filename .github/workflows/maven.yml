@@ -5,6 +5,8 @@ name: Java CI with Maven
 
 on:
   push:
+    paths:
+      - server
     branches: 
       - master
       - dev
@@ -15,7 +17,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 8

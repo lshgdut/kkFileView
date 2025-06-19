@@ -83,8 +83,8 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           platforms: ${{ matrix.platform }}
-          context: docker/kkfileview-base
-          file: ./Dockerfile
+          context: ./docker/kkfileview-base
+          file: ./docker/kkfileview-base/Dockerfile
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
             SHA=${{ steps.vars.outputs.sha_short }}
